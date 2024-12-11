@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <script type="module" src="./assets/js/main.js" defer></script>
+  <script type="module" src="./assets/js/projets.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/scss/main.scss">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jéssica Gonçalves</title>
+</head>
+
+<body class="body">
+  <div id="loader" class="loader" role="status" aria-live="polite">
+    <div class="loader-text">
+      <span id="progress" class="progress-number" aria-label="Progression">0</span>
+    </div>
+    <div class="progress-bar-container">
+      <div id="progress-bar" class="progress-bar" aria-hidden="true"></div>
+    </div>
+  </div>
+  <div id="header-content">
+    <header>
+      <button id="burger-menu" class="burger-menu" aria-label="Ouvrir le menu">
+        <span class="material-icons" aria-hidden="true">menu</span>
+      </button>
+      <div id="dropdown" class="menu-dropdown hidden" role="menu" aria-hidden="true">
+        <div class="menu-content">
+          <section class="menu-header">
+            <div class="nom-profil">
+              <h3>Jessica Gonçalves</h3>
+              <p>Designer UI / UX</p>
+            </div>
+          </section>
+          <div class="main-container">
+            <div class="menu-profil">
+              <p>Je suis une designer UI/UX en transition. Je combine créativité, souci du détail et compétences
+                techniques pour concevoir des expériences centrées sur l'utilisateur.</p>
+              <div class="menu-contact">
+                <div class="contact-item">
+                  <span class="material-icons" aria-hidden="true">location_on</span>
+                  <p>Lévis (QC), Canada</p>
+                </div>
+                <div class="contact-item">
+                  <span class="material-icons" aria-hidden="true">mail</span>
+                  <p><a href="mailto:jpg_jessica@hotmail.com">jpg_jessica@hotmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                  <span class="material-icons" aria-hidden="true">phone</span>
+                  <p><a href="tel:+14182623356">418 262 3356</a></p>
+                </div>
+              </div>
+              <nav>
+                <ul class="menu-links">
+                  <li class="menu-link">
+                    <span class="material-icons" aria-hidden="true">arrow_forward</span>
+                    <a href="https://www.linkedin.com/in/jessica-goncalves1309/" target="_blank"
+                      rel="noopener noreferrer">LinkedIn</a>
+                  </li>
+                  <li class="menu-link">
+                    <span class="material-icons" aria-hidden="true">arrow_forward</span>
+                    <a href="https://www.behance.net/jgoncalvesdesign" target="_blank"
+                      rel="noopener noreferrer">Behance</a>
+                  </li>
+                </ul>
+                <ul class="menu-links">
+                  <li class="menu-link">
+                    <span class="material-icons" aria-hidden="true">arrow_forward</span>
+                    <a href="/assets/data/jessicagoncalves_Curriculum-vitae.pdf"
+                      download="jessicagoncalves_Curriculum-vitae.pdf">Télécharger
+                      CV complet</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="menu-education">
+              <h3>Education</h3>
+              <div class="education-item">
+                <span>Attestation d’études collégiales en Production en Médias Interactifs</span>
+                <p>Cégep Limoilou 2025</p>
+              </div>
+              <div class="education-item">
+                <p>Baccalauréat en Design</p>
+                <p>UFU 2014</p>
+                <p>Évaluation comparative d’études effectuées hors du Québec : Baccalauréat en Arts graphiques</p>
+              </div>
+              <div class="menu-stacks">
+                <div class="table-row">
+                  <div class="table-header">Design</div>
+                  <div class="table-data">Figma | Photoshop | Illustrator | After Effects | Premiere Pro | Corel Draw
+                  </div>
+                </div>
+                <div class="table-row">
+                  <div class="table-header">Dev</div>
+                  <div class="table-data">HTML / CSS | Sass | WordPress | Tailwind | JavaScript | React</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <footer id="footer-content" class="hidden">
+    <button id="arrow_backward" class="intro-button-back horizontal-bounce none" aria-label="Revenir">
+      <span class="material-icons" aria-hidden="true">arrow_backward</span>
+    </button>
+    <div class="footer-intro">
+      <div class="intro-text">
+        <h1>:portfolio</h1>
+        <h2>Jessica Gonçalves</h2>
+      </div>
+    </div>
+    <button id="arrow_forward" class="intro-button horizontal-bounce" aria-label="Continuer">
+      <span class="material-icons" aria-hidden="true">arrow_forward</span>
+    </button>
+  </footer>
+  <section class="projet-wrapper">
+    <div id="projets-holder" aria-label="Projets">
+    </div>
+  </section>
+  <div id="end-container">
+    <div class="menu-profil">
+      <div class="menu-contact">
+        <div class="header-end">
+          <h2>merci</h2>
+        </div>
+        <nav>
+          <div class="contact-item">
+            <span class="material-icons" aria-hidden="true">mail</span>
+            <p><a href="mailto:jpg_jessica@hotmail.com">jpg_jessica@hotmail.com</a></p>
+          </div>
+          <div class="contact-item">
+            <span class="material-icons" aria-hidden="true">phone</span>
+            <p><a href="tel:+14182623356">418 262 3356</a></p>
+          </div>
+          <nav>
+            <ul class="menu-links">
+              <li class="menu-link">
+                <span class="material-icons" aria-hidden="true">arrow_forward</span>
+                <a href="https://www.linkedin.com/in/jessica-goncalves1309/" target="_blank"
+                  rel="noopener noreferrer">LinkedIn</a>
+              </li>
+              <li class="menu-link">
+                <span class="material-icons" aria-hidden="true">arrow_forward</span>
+                <a href="https://www.behance.net/jgoncalvesdesign" target="_blank" rel="noopener noreferrer">Behance</a>
+              </li>
+            </ul>
+            <ul class="menu-links">
+              <li class="menu-link">
+                <span class="material-icons" aria-hidden="true">arrow_forward</span>
+                <a href="/assets/data/jessicagoncalves_Curriculum-vitae.pdf"
+                  download="jessicagoncalves_Curriculum-vitae.pdf">Télécharger
+                  CV complet</a>
+              </li>
+            </ul>
+          </nav>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="modale-wrapper">
+    <div id="modale-holder" class="hidden" role="dialog" aria-labelledby="modale-header"
+      aria-describedby="modale-contenu">
+      <header id="modale-header">
+        <div class="info-header"></div>
+        <button data-modal-close aria-label="Fermer la modale">FERMER</button>
+      </header>
+      <div id="modale-contenu"></div>
+    </div>
+  </div>
+</body>
+
+</html>

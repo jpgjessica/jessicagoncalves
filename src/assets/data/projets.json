@@ -1,0 +1,161 @@
+[
+    {
+        "id": 1,
+        "title": "OKA",
+        "img": [
+            "../assets/img/oka_01.png",
+            "../assets/img/oka_02.png"
+        ],
+        "imgAlt": "Images du projet OKA",
+        "description": "Oka est un projet conçu de A à Z. J'ai commencé par créer l'identité visuelle avec Illustrator et Photoshop, puis j'ai réalisé une animation avec After Effects pour promouvoir la marque. J'ai également conçu le design system et le prototype sur Figma. Dans le cadre du cours d'Interface mobile, j'ai développé un site web responsive pour le blog Oka en utilisant HTML, CSS et JavaScript.",
+        "type": [
+            "identité visuelle",
+            "design d'interface",
+            "prototype",
+            "développement Oka blog"
+        ],
+        "date": "09-2023/06-2024",
+        "liens": {
+            "behance": "https://www.behance.net/gallery/209767267/Design-dinterface-OKA-UI-KIT-et-prototype",
+            "figma": "https://www.figma.com/proto/Jp1SGIIdN3pPmQuKii6VZT/UI_Kit_pereiragoncalves-jessica?page-id=222%3A2789&node-id=222-2833&node-type=canvas&viewport=160%2C476%2C0.16&t=HoI0yE6NHDyrtc0A-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=222%3A2833",
+            "github": "https://github.com/jpgjessica/tl-01_interface-mobile_pereiragoncalves-jessica.git",
+            "vercel": "https://tl-01-interface-mobile-pereiragoncalves-jessica.vercel.app/"
+        },
+        "stack": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "gridArea": 1
+    },
+    {
+        "id": 2,
+        "title": "Jeu de trivia",
+        "img": [
+            "../assets/img/trivia_01.png",
+            "../assets/img/trivia_02.png"
+        ],
+        "imgAlt": "Image du projet Jeu de trivia",
+        "description": "Le projet Trivia a été développé en collaboration avec Alicia Ross. Nous avons créé un site web responsive qui respecte notre maquette, avec une identité visuelle forte. Ce jeu utilise localStorage et des appels à des API (Open Trivia) pour une expérience interactive. Le développement a été réalisé avec HTML, JavaScript et Tailwind, en intégrant la librairie Animate.js pour plus d'interactivité.",
+        "type": [
+            "design d'interface",
+            "développement"
+        ],
+        "date": "10-2024",
+        "liens": {
+            "behance": "https://www.behance.net/gallery/212811805/Design-dinterface-Dveloppement-Jeu-Trivia",
+            "github": "https://github.com/jpgjessica/TP_01_applications_interactives.git",
+            "vercel": "https://tp-01-applications-interactives-jessicas-projects-ff0f369c.vercel.app/"
+        },
+        "stack": [
+            "Figma",
+            "HTML",
+            "JavaScript",
+            "Tailwind",
+            "Animate.js"
+        ],
+        "gridArea": 3
+    },
+    {
+        "id": 3,
+        "title": "Maison de la culture du pic champlain",
+        "img": [
+            "../assets/img/MCPC_01.png",
+            "../assets/img/MCPC_02.png"
+        ],
+        "imgAlt": "Image du projet Maison de la culture du pic champlain",
+        "description": "Ce projet de refonte du site web a été réalisé en collaboration avec Clémentine Digout, Eve Cloutier et Marie-Michelle Landry. Il vise à relever des défis réels dans la conception et le développement d'un site web. Nous avons mis l'accent sur les besoins du client et proposé des fonctionnalités telles que la radio live et un espace membre. En plus, nous avons conçu un logo pour l'avenir. Actuellement, nous travaillons sur un site WordPress entièrement personnalisé.",
+        "type": [
+            "identité visuelle",
+            "design d'interface",
+            "prototype",
+            "développement thème WordPress from scratch"
+        ],
+        "date": "09-2024/02-2025",
+        "liens": {
+            "behance": "https://www.behance.net/gallery/213165997/MCPC-Maison-de-la-Culture-du-Pic-Champlain",
+            "figma": "https://www.figma.com/proto/QfkPJ5HytDJHcPMwLEWSZH/MCPC_Projet-I_Design?page-id=1487%3A16027&node-id=1487-16028&node-type=canvas&viewport=44%2C634%2C0.04&t=i41XbmPbZyPLI1CP-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1487%3A16028"
+        },
+        "stack": [
+            "Figma",
+            "Illustrator",
+            "AfterEffects",
+            "HTML",
+            "JavaScript",
+            "PHP",
+            "SCSS"
+        ],
+        "gridArea": 2
+    },
+    {
+        "id": 5,
+        "title": "Color Display",
+        "img": [
+            "../assets/img/palette_01.png"
+        ],
+        "imgAlt": "Image du projet Color Display",
+        "description": "Tout comme le jeu de couleurs, le Color Display marque mes débuts en JavaScript. J'ai créé des palettes de couleurs qui changent au clic sur un bouton.",
+        "type": [
+            "développement"
+        ],
+        "date": "02-2024",
+        "liens": {
+            "github": "https://github.com/jpgjessica/palette-de-couleurs",
+            "vercel": "https://palette-de-couleurs.vercel.app/"
+        },
+        "stack": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "gridArea": 5
+    },
+    {
+        "id": 4,
+        "title": "Jeu de couleurs",
+        "img": [
+            "../assets/img/jeuxDeColeurs_01.png",
+            "../assets/img/jeuxDeColeurs_02.png"
+        ],
+        "imgAlt": "Image du projet Jeu de couleurs",
+        "description": "Le jeu de couleurs démontre mes débuts en JavaScript. J'ai développé un petit jeu mettant en valeur une identité visuelle forte, avec des animations créées à l'aide de keyframes.",
+        "type": [
+            "design d'interface",
+            "développement"
+        ],
+        "date": "03-2024",
+        "liens": {
+            "github": "https://github.com/jpgjessica/jeux-de-couleurs",
+            "vercel": "https://jeux-de-couleurs.vercel.app/"
+        },
+        "stack": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "gridArea": 4
+    },
+    {
+        "id": 6,
+        "title": "Baby Names et Agify API",
+        "img": [
+            "../assets/img/babyNames_01.png"
+        ],
+        "imgAlt": "Image du projet Baby Names et Agify API",
+        "description": "Dans ce projet, j'ai utilisé deux APIs, Agify et une autre, pour mettre en pratique mes connaissances en localStorage et en requêtes API. J'ai créé une identité visuelle minimaliste pour une expérience utilisateur épurée. L'application permet de récupérer l'âge moyen des noms et leur signification, tout en offrant la possibilité d'enregistrer des noms préférés.",
+        "type": [
+            "développement"
+        ],
+        "date": "02-2024",
+        "liens": {
+            "github": "lien GitHub",
+            "vercel": "lien Vercel"
+        },
+        "stack": [
+            "HTML",
+            "JavaScript",
+            "Tailwind"
+        ],
+        "gridArea": 6
+    }
+]
