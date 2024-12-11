@@ -10,7 +10,7 @@ export function startLoader() {
     progressText.innerText = `${progress}%`;
     progressBar.style.width = `${progress}%`;
 
-    if (progress >= 10) {
+    if (progress >= 100) {
       clearInterval(interval);
       loader.classList.add('animate__animated');
       loader.classList.add('animate__fadeOut');
