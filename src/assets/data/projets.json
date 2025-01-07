@@ -3,8 +3,8 @@
         "id": 1,
         "title": "OKA",
         "img": [
-            "../public/img/oka_01.png",
-            "../public/img/oka_02.png"
+            "public/img/oka_01.png",
+            "public/img/oka_02.png"
         ],
         "imgAlt": "Images du projet OKA",
         "description": "Oka est un projet conçu de A à Z. J'ai commencé par créer l'identité visuelle avec Illustrator et Photoshop, puis j'ai réalisé une animation avec After Effects pour promouvoir la marque. J'ai également conçu le design system et le prototype sur Figma. Dans le cadre du cours d'Interface mobile, j'ai développé un site web responsive pour le blog Oka en utilisant HTML, CSS et JavaScript.",
