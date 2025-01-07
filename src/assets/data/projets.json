@@ -3,7 +3,7 @@
         "id": 1,
         "title": "OKA",
         "img": [
-            "../assets/img/oka_01.png",
+            "../public/img/oka_01.png",
             "../assets/img/oka_02.png"
         ],
         "imgAlt": "Images du projet OKA",
