@@ -5,6 +5,7 @@ export function setupDropdownMenu() {
 
   burgerMenu.addEventListener('click', () => {
     dropdown.classList.toggle('hidden');
+    menuIcon.classList.toggle('active-icon');
 
     if (dropdown.classList.contains('hidden')) {
       menuIcon.textContent = 'menu';
@@ -17,8 +18,7 @@ export function setupDropdownMenu() {
     if (!burgerMenu.contains(event.target) && !dropdown.contains(event.target)) {
       dropdown.classList.add('hidden');
       menuIcon.textContent = 'menu';
+      menuIcon.classList.remove('active-icon');
     }
   });
 }
-
-
