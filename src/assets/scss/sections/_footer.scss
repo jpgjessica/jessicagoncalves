@@ -1,0 +1,78 @@
+#footer-content {
+  z-index: 40;
+
+  .intro-button {
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 30;
+  }
+
+  .intro-button-back {
+    visibility: hidden;
+    position: fixed;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    left: 2rem;
+    bottom: 2rem;
+    z-index: 30;
+  }
+
+  .footer-intro {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+    position: absolute;
+    gap: 2rem;
+    right: 4rem;
+    bottom: 2rem;
+    z-index: 20;
+
+    .intro-text {
+      line-height: 0.02;
+      text-align: left;
+
+      h1 {
+        margin-bottom: 4rem;
+        font-weight: lighter;
+        font-family: "Ubuntu Mono", monospace;
+        font-size: clamp(3em, 5vw, 5.95em);
+        width: max-content;
+        text-align: right;
+      }
+
+      h2 {
+        font-family: "Montserrat", serif;
+        font-size: 1.5em;
+        font-weight: 500;
+        text-align: right;
+        color: $text-gray;
+      }
+    }
+  }
+
+  @include media-query("desktop") {
+    .intro-button {
+      position: fixed;
+      right: 4rem;
+      bottom: 2rem;
+    }
+
+    .intro-button-back {
+      visibility: visible;
+      position: fixed;
+      left: 4rem;
+      bottom: 2rem;
+    }
+
+    .footer-intro {
+      right: 8rem;
+      bottom: 2rem;
+    }
+  }
+}

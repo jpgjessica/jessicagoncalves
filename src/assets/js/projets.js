@@ -1,4 +1,8 @@
 import projets from "../data/projets.json";
+import {
+  disableScrollNavigation,
+  enableScrollNavigation,
+} from "../components/horizontalScroll.js";
 
 console.log(projets);
 
@@ -18,9 +22,9 @@ const generateModaleContent = (projet) => {
   const date = document.createElement("span");
   const divImg = document.createElement("div");
   const img = document.createElement("img");
-  const img02 = document.createElement("img");
   const typeP = document.createElement("li");
-  const liensHolder = document.createElement("ul");
+  const liensHolderDesign = document.createElement("ul");
+  const liensHolderDev = document.createElement("ul");
 
   if (header.querySelector("h2")) {
     header.querySelector("h2").remove();
@@ -32,7 +36,8 @@ const generateModaleContent = (projet) => {
   typeProjHolder.classList.add("list-vertical");
   stackHolder.classList.add("list-vertical");
   closeBtn.classList.add("material-icons");
-  liensHolder.classList.add("liens-projet");
+  liensHolderDesign.classList.add("liens-projet");
+  liensHolderDev.classList.add("liens-projet");
 
   title.textContent = projet.title;
   closeBtn.textContent = "close";
@@ -46,6 +51,9 @@ const generateModaleContent = (projet) => {
   holder.classList.remove("hidden");
   closeBtn.addEventListener("click", () => {
     holder.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
+    document.body.classList.add("overflow-visible");
+    enableScrollNavigation();
   });
 
   const stackItems = projet.stack;
@@ -60,29 +68,54 @@ const generateModaleContent = (projet) => {
     typeProjHolder.appendChild(liElement);
   });
 
-  const projetLiens = projet.liens;
-  for (let lien in projetLiens) {
+  const projetLiensDesign = projet.liens_design;
+  for (let lien in projetLiensDesign) {
     const liElement = document.createElement("li");
     const aElement = document.createElement("a");
     const iElement = document.createElement("i");
     aElement.textContent = lien;
-    aElement.href = projetLiens[lien];
+    aElement.href = projetLiensDesign[lien];
     aElement.target = "_blank";
     iElement.textContent = "arrow_forward";
     iElement.classList.add("material-icons", +lien);
     liElement.classList.add("button--material-outlined");
     aElement.prepend(iElement);
     liElement.appendChild(aElement);
-    liensHolder.appendChild(liElement);
+    liensHolderDesign.appendChild(liElement);
+  }
+
+  const projetLiensDev = projet.liens_dev;
+  for (let lien in projetLiensDev) {
+    const liElement = document.createElement("li");
+    const aElement = document.createElement("a");
+    const iElement = document.createElement("i");
+    aElement.textContent = lien;
+    aElement.href = projetLiensDev[lien];
+    aElement.target = "_blank";
+    iElement.textContent = "arrow_forward";
+    iElement.classList.add("material-icons", +lien);
+    liElement.classList.add("button--material-outlined");
+    aElement.prepend(iElement);
+    liElement.appendChild(aElement);
+    liensHolderDev.appendChild(liElement);
+  }
+
+  if (projetLiensDesign) {
+    const designTitle = document.createElement("h3");
+    designTitle.textContent = "Design";
+    liensHolderDesign.prepend(designTitle);
+  }
+
+  if (projetLiensDev) {
+    const devTitle = document.createElement("h3");
+    devTitle.textContent = "Dev";
+    liensHolderDev.prepend(devTitle);
   }
 
   divImg.classList.add("div-img");
   img.src = projet.img[0];
-  img.classList.add("first-img");
+  img.classList.add("first-modale-img");
   img.alt = projet.imgAlt;
-  img02.src = projet.img[1];
-  img02.classList.add("second-img");
-  img02.alt = projet.imgAlt;
 
   divTitleType.appendChild(typeProjHolder);
   divTitleType.appendChild(title);
@@ -91,149 +124,104 @@ const generateModaleContent = (projet) => {
   typeStackHolder.appendChild(stackHolder);
   typeStackHolder.appendChild(date);
   divImg.appendChild(img);
-  divImg.appendChild(img02);
-  infosHolder.appendChild(descriptionHolder);
-  infosHolder.appendChild(liensHolder);
-  infosHolder.appendChild(divImg);
-  contenuHolder.prepend(typeStackHolder);
-  contenuHolder.prepend(infosHolder);
-};
 
-function generateTwoImagesProjectsLists(projetsArray) {
-  const holder = document.getElementById("projets-holder");
-
-  projetsArray.forEach((projet) => {
-    const cardHolder = document.createElement("div");
-    const div = document.createElement("div");
-    const header = document.createElement("header");
-    const title = document.createElement("h3");
-    const divImg = document.createElement("div");
-    const img = document.createElement("img");
+  if (projet.img[1]) {
     const img02 = document.createElement("img");
-    const cardBtn = document.createElement("button");
-    const iconBtn = document.createElement("span");
-
-    cardHolder.classList.add("projets-holder-page");
-    title.textContent = projet.title;
-    divImg.classList.add("div-img");
-    img.src = projet.img[0];
-    img.classList.add("first-img");
-    img.alt = projet.imgAlt;
     img02.src = projet.img[1];
     img02.classList.add("second-img");
     img02.alt = projet.imgAlt;
-
-    cardBtn.textContent = "En savoir plus";
-    cardBtn.setAttribute(
-      "aria-label",
-      `${cardBtn.textContent} - ${projet.title}`
-    );
-    cardBtn.classList.add("btn-project");
-    iconBtn.classList.add("material-icons");
-    iconBtn.textContent = "arrow_forward";
-    cardBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      generateModaleContent(projet);
-    });
-    cardBtn.prepend(iconBtn);
-
-    const typeItems = projet.type;
-    const divHeader = document.createElement("div");
-    divHeader.prepend(title);
-
-    typeItems.forEach((item) => {
-      const liElement = document.createElement("li");
-      liElement.textContent = item;
-      divHeader.appendChild(liElement);
-    });
-
-    const projectLink = document.createElement("a");
-    projectLink.href = `/projet/${projet.id}`;
-    projectLink.classList.add("project-link");
-    projectLink.appendChild(cardHolder);
-
-    header.appendChild(divHeader);
-    header.appendChild(cardBtn);
-    div.appendChild(header);
-    divImg.appendChild(img);
     divImg.appendChild(img02);
-    div.appendChild(divImg);
-    cardHolder.appendChild(div);
-    holder.appendChild(cardHolder);
-  });
+  }
+
+  const divliens = document.createElement("div");
+  divliens.classList.add("div-liens");
+
+  divliens.appendChild(liensHolderDesign);
+  divliens.appendChild(liensHolderDev);
+  infosHolder.appendChild(descriptionHolder);
+  infosHolder.appendChild(divImg);
+  contenuHolder.prepend(typeStackHolder);
+  contenuHolder.prepend(infosHolder);
+  infosHolder.appendChild(divliens);
+};
+
+function generateTwoProjectsPerPage(projetsArray1, projetsArray2) {
+  const holder = document.getElementById("projets-holder");
+  const cardHolder = document.createElement("div");
+  cardHolder.classList.add("projets-holder-page");
+  cardHolder.appendChild(generateOneImageProjectsLists(projetsArray1, 0));
+  if (projetsArray2) {
+    cardHolder.appendChild(generateOneImageProjectsLists(projetsArray2, 1));
+  }
+  holder.appendChild(cardHolder);
 }
 
-function generateOneImageProjectsLists(projetsArray) {
-  const holder = document.getElementById("projets-holder");
+function generateOneImageProjectsLists(projet, index) {
+  const div = document.createElement("div");
+  const header = document.createElement("header");
+  const title = document.createElement("h3");
+  const divImg = document.createElement("div");
+  const img = document.createElement("img");
+  const cardBtn = document.createElement("button");
+  const iconBtn = document.createElement("span");
+  const divHeader = document.createElement("div");
+  const projectLink = document.createElement("a");
 
-  projetsArray.forEach((projet) => {
-    const cardHolder = document.createElement("div");
-    const div = document.createElement("div");
-    const header = document.createElement("header");
-    const title = document.createElement("h3");
-    const divImg = document.createElement("div");
-    const img = document.createElement("img");
-    const cardBtn = document.createElement("button");
-    const iconBtn = document.createElement("span");
-    const divHeader = document.createElement("div");
-    const projectLink = document.createElement("a");
+  div.classList.add("div-single");
+  div.classList.add(`div-single-${index}`);
 
-    cardHolder.classList.add("projets-holder-page");
-    div.classList.add("div-single");
-    divImg.classList.add("div-img-single");
-
-    cardBtn.classList.add("btn-project");
-    cardBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      generateModaleContent(projet);
-    });
-    iconBtn.classList.add("material-icons");
-    projectLink.classList.add("project-link");
-
-    title.textContent = projet.title;
-    img.src = projet.img[0];
-    img.classList.add("first-img");
-    img.alt = projet.imgAlt;
-    cardBtn.textContent = "En savoir plus";
-    cardBtn.setAttribute(
-      "aria-label",
-      `${cardBtn.textContent} - ${projet.title}`
-    );
-    iconBtn.textContent = "arrow_forward";
-    projectLink.href = `/projet/${projet.id}`;
-
-    cardBtn.prepend(iconBtn);
-
-    const typeItems = projet.type;
-    typeItems.forEach((item) => {
-      const liElement = document.createElement("li");
-      liElement.textContent = item;
-      divHeader.appendChild(liElement);
-    });
-    cardBtn.addEventListener("click", () => {
-      generateModaleContent(projet);
-    });
-
-    divHeader.prepend(title);
-    header.appendChild(divHeader);
-    header.appendChild(cardBtn);
-    divImg.appendChild(img);
-    div.appendChild(header);
-    div.appendChild(divImg);
-    cardHolder.appendChild(div);
-    projectLink.appendChild(cardHolder);
-    holder.appendChild(cardHolder);
+  cardBtn.classList.add("btn-project");
+  cardBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    generateModaleContent(projet);
+    document.body.classList.remove("overflow-visible");
+    document.body.classList.add("overflow-hidden");
+    disableScrollNavigation();
   });
+  iconBtn.classList.add("material-icons");
+  projectLink.classList.add("project-link");
+
+  title.textContent = projet.title;
+  img.src = projet.img[0];
+  img.classList.add("first-img");
+  img.alt = projet.imgAlt;
+  cardBtn.textContent = "En savoir plus";
+  cardBtn.setAttribute(
+    "aria-label",
+    `${cardBtn.textContent} - ${projet.title}`
+  );
+  iconBtn.textContent = "add";
+  projectLink.href = `/projet/${projet.id}`;
+
+  cardBtn.prepend(iconBtn);
+
+  const typeItems = projet.type;
+  typeItems.forEach((item) => {
+    const liElement = document.createElement("li");
+    liElement.textContent = item;
+    divHeader.appendChild(liElement);
+  });
+  cardBtn.addEventListener("click", () => {
+    generateModaleContent(projet);
+  });
+
+  divHeader.prepend(title);
+  header.appendChild(divHeader);
+  header.appendChild(cardBtn);
+  divImg.appendChild(img);
+  div.appendChild(header);
+  div.appendChild(divImg);
+  projectLink.appendChild(div);
+  return div;
 }
 document.addEventListener("DOMContentLoaded", () => {
   const holder = document.getElementById("projets-holder");
   holder.innerHTML = "";
 
-  projets.forEach((projet, index) => {
-    if ((index + 1) % 2 === 1) {
-      generateTwoImagesProjectsLists([projet]);
-    } else {
-      generateOneImageProjectsLists([projet]);
-    }
-  });
+  for (let i = 0; i < projets.length; i += 2) {
+    generateTwoProjectsPerPage(
+      projets[i],
+      projets[i + 1] ? projets[i + 1] : null
+    );
+  }
 });

@@ -1,89 +1,102 @@
 @mixin horizontal-scroll {
-    display: flex;
-    flex-direction: row;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    height: 100vh;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 100vh;
 }
 
-@mixin animation($name, $duration, $timing-function: ease, $delay: 0s, $iteration-count: 1) {
-    animation: $name $duration $timing-function $delay $iteration-count;
+@mixin animation(
+  $name,
+  $duration,
+  $timing-function: ease,
+  $delay: 0s,
+  $iteration-count: 1
+) {
+  animation: $name $duration $timing-function $delay $iteration-count;
 }
 
 @mixin transition($properties, $duration, $timing-function: ease, $delay: 0s) {
-    transition: $properties $duration $timing-function $delay;
+  transition: $properties $duration $timing-function $delay;
 }
 
-@mixin flex-center($direction: row, $align-items: center, $justify-content: center) {
-    display: flex;
-    flex-direction: $direction;
-    align-items: $align-items;
-    justify-content: $justify-content;
+@mixin flex-center(
+  $direction: row,
+  $align-items: center,
+  $justify-content: center
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
 }
 
 @mixin color($background-color, $text-color) {
-    background-color: $background-color;
-    color: $text-color;
+  background-color: $background-color;
+  color: $text-color;
 }
 
 @mixin button-hover-effect($color) {
-    cursor: pointer;
+  cursor: pointer;
 
-    &:hover {
-        background-color: darken($color, 10%);
-    }
+  &:hover {
+    background-color: darken($color, 10%);
+  }
 }
 
-@mixin bouton-outlined($border-color, $hover-bg, $hover-color, $focus-color, $transition-time: 0.3s) {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 1.5rem;
+@mixin bouton-outlined(
+  $border-color,
+  $hover-bg,
+  $hover-color,
+  $focus-color,
+  $transition-time: 0.3s
+) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.2rem;
+  border: 0.1rem solid $border-color;
+  border-radius: 50rem;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color $transition-time, transform $transition-time,
+    color $transition-time;
+
+  &:hover {
     border: 0.1rem solid $border-color;
-    border-radius: 50rem;
-    background: none;
-    color: inherit;
-    font-family: inherit;
-    font-size: 1rem;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color $transition-time, transform $transition-time, color $transition-time;
+    transform: scale(1.02);
+    font-weight: 500;
+  }
 
-    &:hover {
+  &:focus {
+    outline: 1px solid $focus-color;
+    outline-offset: 2px;
+  }
 
-        border: 0.15rem solid $border-color;
-        transform: scale(1.02);
-    }
-
-    &:focus {
-        outline: 1px solid $focus-color;
-        outline-offset: 2px;
-    }
-
-    &:disabled {
-        cursor: not-allowed;
-        opacity: 0.6;
-    }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
 }
 
 // Mixin pour les media queries
 @mixin media-query($breakpoint) {
-    @if $breakpoint =="mobile" {
-        @media (max-width: 767px) {
-            @content;
-        }
+  @if $breakpoint == "mobile" {
+    @media (max-width: 767px) {
+      @content;
     }
-
-    @else if $breakpoint =="tablet" {
-        @media (max-width: 1024px) {
-            @content;
-        }
+  } @else if $breakpoint == "tablet" {
+    @media (max-width: 1024px) {
+      @content;
     }
-
-    @else if $breakpoint =="desktop" {
-        @media (min-width: 1025px) {
-            @content;
-        }
+  } @else if $breakpoint == "desktop" {
+    @media (min-width: 1025px) {
+      @content;
     }
+  }
 }

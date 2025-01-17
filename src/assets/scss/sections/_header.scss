@@ -1,0 +1,227 @@
+#header-content {
+  z-index: 50;
+
+  @include media-query("desktop") {
+    z-index: 41;
+  }
+
+  header {
+    width: 100vw;
+    min-width: 100%;
+
+    #burger-menu {
+      position: absolute !important;
+      top: 2em;
+      right: 2rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+    }
+
+    #burger-menu .material-icons {
+      color: black;
+    }
+
+    #burger-menu .material-icons.active-icon {
+      color: white;
+    }
+
+    @include media-query("desktop") {
+      #burger-menu {
+        position: fixed !important;
+        top: 4em;
+        right: 4rem;
+      }
+    }
+
+    #dropdown {
+      overflow-y: auto;
+      touch-action: pan-y;
+      position: fixed;
+      width: 100vw;
+      max-width: 100%;
+      box-sizing: border-box;
+      z-index: 41;
+
+      &.menu-dropdown {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        background-color: $text-theme-primary;
+        color: $bg-theme-background;
+      }
+
+      .hidden {
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+      }
+
+      .menu-content {
+        font-family: "Montserrat", serif;
+        font-size: 1em;
+        font-weight: 400;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include media-query("desktop") {
+          gap: 3rem;
+          padding: 3rem 14rem;
+        }
+
+        .menu-header {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+
+          @include media-query("desktop") {
+            grid-template-columns: 1fr 1fr;
+            gap: 14rem;
+          }
+
+          .nom-profil {
+            width: 100%;
+
+            h3 {
+              font-size: 2em;
+              font-weight: 400;
+            }
+
+            p {
+              font-size: 1.5em;
+              font-weight: 400;
+            }
+          }
+
+          .menu-projects {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+          }
+
+          .project-menu-button {
+            @include bouton-outlined(
+              $bg-theme-background,
+              $text-gray,
+              $theme-primary,
+              $text-gray
+            );
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+          }
+        }
+
+        .main-container {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          .education-item {
+            p {
+              font-weight: 400;
+            }
+          }
+
+          @include media-query("desktop") {
+            grid-template-columns: 1fr 1fr;
+            gap: 14rem;
+          }
+
+          .menu-profil {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            .menu-contact {
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+
+              .contact-item {
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+              }
+            }
+
+            nav {
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+
+              .menu-links {
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                justify-content: space-between;
+                gap: 2rem;
+
+                a {
+                  text-decoration: none;
+                  color: inherit;
+                  background: none;
+                  border: none;
+                  padding: 0;
+                  margin: 0;
+                  font: inherit;
+                }
+              }
+
+              :first-child {
+                display: flex;
+                flex-direction: row;
+              }
+
+              .menu-link {
+                width: 100%;
+                @include bouton-outlined(
+                  $bg-theme-background,
+                  $text-gray,
+                  $theme-primary,
+                  $text-gray
+                );
+                display: flex;
+                gap: 1rem;
+                justify-content: center;
+              }
+            }
+          }
+
+          .menu-education {
+            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+
+            .menu-stacks {
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+            }
+
+            .table-row {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              .table-header {
+                font-weight: bold;
+                width: 20%;
+                text-align: left;
+              }
+
+              .table-data {
+                width: 75%;
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

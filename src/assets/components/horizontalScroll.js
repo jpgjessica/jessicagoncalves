@@ -1,6 +1,16 @@
 let arrowFoward;
 let arrowBackward;
 
+let scrollNavigationEnabler = true;
+
+export function disableScrollNavigation() {
+  scrollNavigationEnabler = false;
+}
+
+export function enableScrollNavigation() {
+  scrollNavigationEnabler = true;
+}
+
 export function scrollNavigation() {
   arrowFoward = document.querySelector(".intro-button");
   arrowBackward = document.querySelector(".intro-button-back");
@@ -14,11 +24,12 @@ export function scrollNavigation() {
   });
 
   window.addEventListener("wheel", (e) => {
-    e.preventDefault();
-    if (e.deltaY > 0) {
-      nextPage();
-    } else {
-      previousPage();
+    if (scrollNavigationEnabler) {
+      if (e.deltaY > 0) {
+        nextPage();
+      } else {
+        previousPage();
+      }
     }
   });
 
