@@ -83,7 +83,10 @@ body {
 }
 
 .overflow-hidden {
-  overflow-x: hidden;
+  overflow-x: visible;
+  @include media-query("desktop") {
+    overflow-x: hidden;
+  }
 }
 
 .overflow-visible {
@@ -217,12 +220,16 @@ body {
 
     #dropdown {
       overflow-y: auto;
-      touch-action: pan-y;
-      position: fixed;
       width: 100vw;
+      height: 100vh;
       max-width: 100%;
       box-sizing: border-box;
       z-index: 41;
+
+      @include media-query("desktop") {
+        position: fixed;
+        height: auto;
+      }
 
       &.menu-dropdown {
         transition: opacity 0.3s ease, transform 0.3s ease;
@@ -408,11 +415,10 @@ body {
   display: flex;
   flex-direction: column;
   z-index: 0;
-  margin-top: 1000px;
+  margin-top: 0;
 
   @include media-query("desktop") {
     flex-direction: row;
-    margin-top: 0;
   }
 
   .projets-holder-page {
@@ -584,7 +590,16 @@ body {
 /* Modale */
 .modale-wrapper {
   position: fixed;
+  height: auto;
+  height: 100vh;
   z-index: 100;
+  overflow-y: auto;
+  background-color: $bg-theme-background;
+
+  @include media-query("desktop") {
+    position: fixed;
+    height: auto;
+  }
 
   #modale-holder {
     width: 100vw;
@@ -654,6 +669,7 @@ body {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
+        padding-bottom: 4rem;
       }
 
       .div-img {
