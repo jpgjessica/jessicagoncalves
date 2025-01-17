@@ -6,7 +6,7 @@ export function startLoader() {
   const footerContent = document.getElementById("footer-content");
 
   const interval = setInterval(() => {
-    progress += 100;
+    progress += 1;
     progressText.innerText = `${progress}%`;
     progressBar.style.width = `${progress}%`;
 
