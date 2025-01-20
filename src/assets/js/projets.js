@@ -102,13 +102,13 @@ const generateModaleContent = (projet) => {
 
   if (projetLiensDesign) {
     const designTitle = document.createElement("h3");
-    designTitle.textContent = "Design";
+    designTitle.textContent = "Details Design";
     liensHolderDesign.prepend(designTitle);
   }
 
   if (projetLiensDev) {
     const devTitle = document.createElement("h3");
-    devTitle.textContent = "Dev";
+    devTitle.textContent = "Details Dev";
     liensHolderDev.prepend(devTitle);
   }
 
