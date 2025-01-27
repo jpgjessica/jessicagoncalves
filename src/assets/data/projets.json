@@ -2,7 +2,10 @@
   {
     "id": 1,
     "title": "OKA",
-    "img": ["/img/oka_01.png", "/img/oka_02.png"],
+    "img": [
+      "/img/oka_01.png",
+      "/img/oka_02.png"
+    ],
     "imgAlt": "Images du projet OKA",
     "description": "Le projet Oka a été développé de A à Z, incluant la création de l'identité visuelle avec Illustrator et Photoshop, ainsi qu'une animation sur After Effects pour renforcer la marque. J'ai également conçu un design system et un prototype interactif sur Figma. Enfin, j'ai développé un site web responsive pour le blog Oka en utilisant HTML, CSS et JavaScript, pour garantir une expérience utilisateur fluide sur tous les appareils.",
     "type": [
@@ -22,16 +25,27 @@
       "github": "https://github.com/jpgjessica/tl-01_interface-mobile_pereiragoncalves-jessica.git",
       "OKA blog vercel": "https://tl-01-interface-mobile-pereiragoncalves-jessica.vercel.app/blogue.html"
     },
-    "stack": ["HTML", "CSS", "JavaScript"],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "gridArea": 1
   },
   {
     "id": 2,
     "title": "Maison de la Culture du Pic Champlain",
-    "img": ["/img/MCPC_01.png", "/img/MCPC_02.png"],
+    "img": [
+      "/img/MCPC_01.png",
+      "/img/MCPC_02.png"
+    ],
     "imgAlt": "Image du projet Maison de la culture du pic champlain",
     "description": "Ce projet de refonte du site web a été réalisé en collaboration avec Clémentine Digout, Eve Cloutier et Marie-Michelle Landry. Il vise à relever des défis réels dans la conception et le développement d'un site web. Nous avons mis l'accent sur les besoins du client et proposé des fonctionnalités telles que la radio live et un espace membre. En plus, nous avons conçu un logo pour l'avenir. Actuellement, nous travaillons sur un site WordPress entièrement personnalisé.",
-    "type": ["Design d'Interface", "Prototype", "Développement WordPress"],
+    "type": [
+      "Design d'Interface",
+      "Prototype",
+      "Développement WordPress"
+    ],
     "date": "09-2024/02-2025",
     "liens_design": {
       "Design UI/UX behance": "https://www.behance.net/gallery/213165997/MCPC-Maison-de-la-Culture-du-Pic-Champlain",
@@ -51,10 +65,17 @@
   {
     "id": 3,
     "title": "Jeu de trivia",
-    "img": ["/img/trivia_03.png", "/img/trivia_02.png", "/img/trivia_03.png"],
+    "img": [
+      "/img/trivia_03.png",
+      "/img/trivia_02.png",
+      "/img/trivia_03.png"
+    ],
     "imgAlt": "Image du projet Jeu de trivia",
     "description": "Le projet Trivia a été développé en collaboration avec Alicia Ross. Nous avons créé un site web responsive qui respecte notre maquette, avec une identité visuelle forte. Ce jeu utilise localStorage et des appels à des API (Open Trivia) pour une expérience interactive. Le développement a été réalisé avec HTML, JavaScript et Tailwind, en intégrant la librairie Animate.css pour plus d'interactivité.",
-    "type": ["Design d'Interface", "Développement Front-end"],
+    "type": [
+      "Design d'Interface",
+      "Développement Front-end"
+    ],
     "date": "10-2024",
     "liens_design": {
       "Design UI behance": "https://www.behance.net/gallery/212811805/Design-dinterface-Dveloppement-Jeu-Trivia",
@@ -64,7 +85,13 @@
       "github": "https://github.com/jpgjessica/TP_01_applications_interactives.git",
       "Trivia Jeu sur vercel": "https://tp-01-applications-interactives-jessicas-projects-ff0f369c.vercel.app/"
     },
-    "stack": ["Figma", "HTML", "JavaScript", "Tailwind", "Animate.css"],
+    "stack": [
+      "Figma",
+      "HTML",
+      "JavaScript",
+      "Tailwind",
+      "Animate.css"
+    ],
     "gridArea": 3
   },
   {
@@ -85,67 +112,126 @@
     "liens_design": {
       "Rapport sur figma": "https://www.figma.com/design/d620nRsUl0bfCSRe2wj3FA/Rapport-de-recommandations?node-id=0-1&t=MbQGGYKTz04AoHBs-1"
     },
-    "stack": ["Illustrator", "InDesign"],
+    "stack": [
+      "Illustrator",
+      "InDesign"
+    ],
     "gridArea": 7
   },
   {
     "id": 5,
     "title": "Boutique SOL",
-    "img": ["/img/Boutique_SOL.png", "/img/Boutique_SOL_02.png"],
+    "img": [
+      "/img/Boutique_SOL.png",
+      "/img/Boutique_SOL_02.png"
+    ],
     "imgAlt": "Image de couverture de la boutique en ligne SOL",
     "description": "Développement complet d'une boutique en ligne pour Sol, spécialisée dans les lunettes de soleil. Le site comprend les pages Home, Produits, Contact et À propos, avec une navigation intuitive et un design responsive utilisant Tailwind CSS. Intégration d'un panier d'achat fonctionnel, d'un système de recherche et de filtres, ainsi que de formulaires interactifs avec validation en JavaScript.",
-    "type": ["Développement Front-end", "Design d'Interface"],
+    "type": [
+      "Développement Front-end",
+      "Design d'Interface"
+    ],
     "date": "03-2024",
     "liens_dev": {
       "github": "https://github.com/jpgjessica/tl-02.git",
       "Boutique Sol sur vercel": "https://tl-02-cxawib8fp-jessicas-projects-ff0f369c.vercel.app/index.html"
     },
-    "stack": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Tailwind CSS"
+    ],
     "gridArea": 8
   },
   {
     "id": 6,
     "title": "Design Challenges",
-    "img": ["/img/Design_challenges.png", "/img/Design_challenges02.png"],
+    "img": [
+      "/img/Design_challenges.png",
+      "/img/Design_challenges02.png"
+    ],
     "imgAlt": "Image dun design challenge",
     "description": "J'ai mené cinq projets de design centrés sur l'utilisateur, renforçant ma capacité à concevoir des interfaces engageantes. J'ai développé une expertise avancée sur Figma, créant des maquettes et des composants, et en approfondissant ma compréhension des design systems. Mes réalisations incluent la conception d'interfaces mobiles pour la gestion de profils utilisateurs et la prise de rendez-vous, ainsi que des pages produits optimisées pour une expérience e-commerce fluide.",
-    "type": ["Design UI/UX"],
+    "type": [
+      "Design UI/UX"
+    ],
     "date": "08-2024",
     "liens_design": {
       "Design UX/UI sur figma": "https://www.figma.com/design/LKNyPCwBSpIzOJodD3e95Y/Design_Challenges_JessicaGoncalves?node-id=0-1&t=mY0BRCDLqABe0h6g-1"
     },
-    "stack": ["Figma", "Illustrator"],
+    "stack": [
+      "Figma",
+      "Illustrator"
+    ],
     "gridArea": 5
   },
-
   {
     "id": 8,
     "title": "Jeu de couleurs",
-    "img": ["/img/jeuxDeColeurs_01.png"],
+    "img": [
+      "/img/jeuxDeColeurs_01.png"
+    ],
     "imgAlt": "Image du projet Jeu de couleurs",
     "description": "Le jeu de couleurs démontre mes débuts en JavaScript à travers un mini-jeu interactif. L'objectif est de cliquer sur un bouton lorsque sa couleur correspond au fond d'écran. J'ai opté pour une esthétique minimaliste et créé des animations fluides avec les keyframes CSS.",
-    "type": ["Design d'Interface", "Développement Front-end"],
+    "type": [
+      "Design d'Interface",
+      "Développement Front-end"
+    ],
     "date": "03-2024",
     "liens_dev": {
       "github": "https://github.com/jpgjessica/jeux-de-couleurs",
       "Jeu sur vercel": "https://jeux-de-couleurs.vercel.app/"
     },
-    "stack": ["HTML", "CSS", "JavaScript"],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "gridArea": 4
   },
   {
     "id": 7,
     "title": "Color Display",
-    "img": ["/img/palette_01.png"],
+    "img": [
+      "/img/palette_01.png"
+    ],
     "imgAlt": "Image du projet Color Display",
     "description": "Tout comme le jeu de couleurs, le Color Display marque mes débuts en JavaScript. J'ai conçu une interface interactive permettant de générer des palettes de couleurs aléatoires. Un bouton actualise les couleurs, et les valeurs RGB et hexadécimales s’affichent au survol.",
-    "type": ["Développement Front-end"],
+    "type": [
+      "Développement Front-end"
+    ],
     "date": "02-2024",
     "liens_dev": {
       "github": "https://github.com/jpgjessica/palette-de-couleurs",
       "Palette sur vercel": "https://palette-de-couleurs.vercel.app/"
     },
-    "stack": ["HTML", "CSS", "JavaScript"],
+    "stack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "gridArea": 5
+  },
+  {
+    "id": 8,
+    "title": "Umbrella Menu",
+    "img": [
+      "/img/umbrella_menu_01.png",
+      "/img/umbrella_menu_02.png"
+    ],
+    "imgAlt": "Image du projet Umbrella Menu",
+    "description": "Dans le cadre du cours de design graphique du programme en Production en Médias Interactifs au Cégep Limoilou, nous devions choisir un restaurant et concevoir le design graphique complet de son menu. Ce projet demandait une immersion dans l’univers du restaurant à travers la création d’un moodboard détaillé et une analyse approfondie de son identité et de sa proposition. J’ai choisi Umbrella Bar, un restaurant que je recommande vivement, situé dans le Dow's Lake Pavilion au bord du lac Dow à Ottawa. Ce lieu unique, avec son ambiance décontractée et sa vibe de plage, m’a inspirée à créer un menu reflétant son identité chaleureuse et estivale. J’ai travaillé avec des couleurs et des éléments graphiques évoquant l’eau, le sable et l’atmosphère relaxante du lac.",
+    "type": [
+      "Design imprimé"
+    ],
+    "date": "12-2023",
+    "liens_dev": {
+      "Design imprimé sur behance": "https://www.behance.net/gallery/217386631/Graphisme"
+    },
+    "stack": [
+      "Illustrator",
+      "Photoshop"
+    ]
   }
 ]
